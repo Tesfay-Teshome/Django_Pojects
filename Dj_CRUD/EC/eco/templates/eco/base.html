@@ -15,31 +15,37 @@
 
     <nav class="navbar navbar-expand-lg  navbar-dark bg-success">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
+          <a class="navbar-brand" href="#">
+            <img src="{% static 'eco/images/neel.png'%}" width="70" height="50">
+          </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link text-white" href="#">About Us</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
+                <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Products
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li><a class="dropdown-item" href="#">Milk</a></li>
+                  <li><a class="dropdown-item" href="#">Curd</a></li>
+                  <li><a class="dropdown-item" href="#">Milkshake</a></li>
+                  <li><a class="dropdown-item" href="#">Lassi</a></li>
+                  <li><a class="dropdown-item" href="#">Ghee</a></li>
+                  <li><a class="dropdown-item" href="#">Paneer</a></li>
+                  <li><a class="dropdown-item" href="#">Cheese</a></li>
+                  <li><a class="dropdown-item" href="#">Ice-Creams</a></li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                <a class="nav-link text-white" href="#">Contact Us</a>
               </li>
             </ul>
             <form class="d-flex" role="search">
@@ -47,6 +53,33 @@
               <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
           </div>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-link dropdown mx-2">
+                <a class="nav-link dropdown-toggle text-white"  href="#"
+                   id="profileDropdown" role="button" data-bs-toggle="dropdown"
+                   aria-expanded="false">
+                   {{ request.user.username| capfirst}}
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown">
+                    <li class="dropdown-item" href="{% url 'profile' %}">Profile</a></li>
+                    <li class="dropdown-item" href="{% url 'orders' %}">Orders</a></li>
+                    <li class="dropdown-item" href="{% url 'passwordchange' %}">Change Password</a></li> 
+                    <li class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>   
+                </ul>    
+            </li>
+            <li class="nav-item mx-2">
+                <a href="#" class="nav-link text-white">Cart</a>
+            </li>
+            <li class="nav-item mx-2">
+                <a href="#" class="nav-link text-white">whitelist</a>
+            </li>
+            <li class="nav-item mx-2">
+                <a href="#" class="nav-link text-white">Login</a>
+            </li>
+            <li class="nav-item mx-2">
+                <a href="#" class="nav-link text-white">Register</a>
+            </li>
+          </ul>  
         </div>
       </nav>
 
