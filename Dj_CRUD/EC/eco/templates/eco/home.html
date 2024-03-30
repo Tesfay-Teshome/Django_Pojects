@@ -3,7 +3,7 @@
 {% block title  %}Home{% endblock title  %}
 
 {% block banner-slider %}
-<div id="carouselExample" class="carousel slide">
+<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img src="{% static 'eco/images/banner/b1.jpg' %}" class="d-block w-100" alt="...">
@@ -18,19 +18,38 @@
         <img src="{% static 'eco/images/banner/b4.jpg' %}" class="d-block w-100" alt="...">
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
 
 {% endblock banner-slider %}
 
+{% block information %}
+     <div class="container">
+        <div class="row bg-success text-center p-5 text-white border-bottom">
+            <h1>Products</h1>
+            <small class="fs-5">
+                Craving fresh, high-quality dairy products delivered straight to your door?
+                Look no further than Tesfay Ecommerce! We offer a wide selection of milk 
+                products to suit every taste and dietary need. Whether you're a fan of creamy
+                whole milk, prefer the lighter option of skim, or require lactose-free or
+                plant-based alternatives, Tesfay Ecommerce has you covered. Our commitment to 
+                quality ensures you receive only the freshest and most delicious milk products
+                available. So ditch the grocery store hassle and experience the convenience of
+                Tesfay Ecommerce for all your milk needs!
+            </small>
+    </div>
+
+     {% endblock information %}
 
 {% block main-content %}
-   <h1>Welcome Tesfay Products Site.......</h1>
+   <div class="container">
+       <h1>Welcome Tesfay Products Site.......</h1>
+   </div>
 {% endblock main-content %}
